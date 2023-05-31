@@ -1,6 +1,6 @@
-from employee import Employee
+from report import Report
 
 print('Hello world')
-employee1 = Employee()
-employee1.create_csv_report('asistencia.csv')
-employee1.create_pdf_report('asistencia.pdf')
+report = Report()
+report.create_csv_report('asistencias.csv')
+report.create_pdf_report('asistencias.pdf')
