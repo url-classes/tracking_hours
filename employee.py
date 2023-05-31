@@ -1,6 +1,5 @@
+from attendance import Attendance
 from faker import Faker
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
 
 fake = Faker()
 
@@ -9,12 +8,10 @@ class Employee:
     def __init__(self):
         self.__firstname = fake.first_name()
         self.__lastname = fake.last_name()
-        self.__attendances: list[datetime] = []
+        self.__attendances: list[Attendance] = []
 
-        current_date = datetime.today()
         for _ in range(31):
-            check_in = fake.date_time_between(start_date=current_date - relativedelta(months=3))
-            self.__attendances.append(check_in)
+            self.__attendances.append(Attendance())
 
     @property
     def fullname(self):
