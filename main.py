@@ -1,6 +1,8 @@
-from report import Report
+from csv_report import CSVReport
+from pdf_report import PDFReport
 
-print('Hello world')
-report = Report()
-report.create_csv_report('asistencias.csv')
-report.create_pdf_report('asistencias.pdf')
+csv_report = CSVReport()
+pdf_report = PDFReport()
+
+csv_report.create_report('asistencias.csv')
+pdf_report.create_report('asistencias.pdf')
